@@ -41,7 +41,7 @@ class Database{
                 //connection already exits, return it
                 return $this->conn;
             }else{
-                $dsn = "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname};username={$this->username};password={$this->password};";
+                $dsn = "pgsql:host={$this->host};dbname={$this->dbname};sslcert=blank;";
                         
                 try{
                     $this->conn = new PDO($dsn, $this->username, $this->password);
