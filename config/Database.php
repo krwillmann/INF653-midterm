@@ -48,7 +48,7 @@ class Database{
                     $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     return $this->conn;
                 }catch(PDOException $e){
-                    echo 'Connection Error: ' . $e->getMessage();
+                    echo json_encode('Connection Error: ' . $e->getMessage());
                 }
             }
         }
