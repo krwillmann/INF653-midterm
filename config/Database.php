@@ -23,7 +23,7 @@ class Database{
 }*/
         private $conn;
         private $host;
-        private $port;
+        //private $port;
         private $dbname;
         private $username;
         private $password;
@@ -33,7 +33,7 @@ class Database{
             $this->password = getenv('PASSWORD');
             $this->dbname = getenv('DBNAME');
             $this->host = getenv('HOST');
-            $this->port = getenv('PORT');
+            //$this->port = getenv('PORT');
         }
 
         public function connect(){
@@ -41,8 +41,8 @@ class Database{
                 //connection already exits, return it
                 return $this->conn;
             }else{
-                $dsn = "pgsql:host={$this->host};port={$this->port};dbname={$this->dbname};";
-
+                $dsn = "pgsql:host={$this->host};dbname={$this->dbname};";
+                        //port={$this->port}
                 try{
                     $this->conn = new PDO($dsn, $this->username, $this->password);
                     $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
