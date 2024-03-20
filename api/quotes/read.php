@@ -32,8 +32,8 @@ if ($num > 0) {
         $quote_item = [
             'id' => $id,
             'quote' => $quote,
-            'author' => $author,
-            'category' => $category 
+            'author' => $author_name,
+            'category' => $category_name 
         ];
 
         // Add the quote's details to the array
