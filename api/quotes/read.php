@@ -64,10 +64,10 @@ if ($num > 0) {
         extract($row); // Converts column names into variables
 
         $quote_item = [
-            'id' => $id,
-            'quote' => $quote,
-            'author' => $author_name,
-            'category' => $category_name 
+            'id' => $row['id'],
+            'quote' => $row['quote'],
+            'author_id' => $row['author_id'],
+            'category_id' => $row['category_id'] 
         ];
 
         // Add the quote's details to the array
