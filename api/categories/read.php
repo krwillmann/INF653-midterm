@@ -1,7 +1,7 @@
 <?php
 // Set Cross-Origin Resource Sharing (CORS) headers for wide accessibility and specify the content type as JSON
-//header('Access-Control-Allow-Origin: *');
-//header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 // Include necessary configuration and model files for database access and category operations
 include_once '../../config/Database.php';

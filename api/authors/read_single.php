@@ -1,7 +1,7 @@
 <?php
 // Set CORS headers to allow all origins and specify content type as JSON
-//header('Access-Control-Allow-Origin: *');
-//header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 // Include necessary files for database access and the author model
 include_once '../../config/Database.php';

@@ -1,7 +1,7 @@
 <?php
 // Set CORS headers to allow all origins and specify the content type as JSON for API responses
-//header('Access-Control-Allow-Origin: *');
-//header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
 
 // Include the necessary configuration and model files
 include_once '../../config/Database.php';
