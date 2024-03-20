@@ -41,7 +41,7 @@ class Database{
                 //connection already exits, return it
                 return $this->conn;
             }else{
-                $dsn = "pgsql:host={$this->host};dbname={$this->dbname};";
+                $dsn = "psql:host={$this->host};dbname={$this->dbname};";
 
                 try{
                     $this->conn = new PDO($dsn, $this->username, $this->password);
