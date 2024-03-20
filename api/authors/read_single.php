@@ -15,7 +15,7 @@ $db = $database->connect();
 $author = new Author($db);
 
 // Retrieve the author's ID from the URL parameter 'id'
-$author->id = isset($_GET['id']) ? $_GET['id'] : die('Missing author ID');
+$author->id = isset($_GET['id']) ? $_GET['id'] : die();
 
 // Attempt to retrieve the author's details using the provided ID
 $authorFound = $author->read_single();
@@ -29,5 +29,5 @@ if ($authorFound) {
     echo json_encode($author_arr);
 } else {
     // If no author is found with the provided ID, output an error message
-    echo json_encode(['message' => 'Author ID Not Found']);
+    echo json_encode(array('message' => 'author_id Not Found'));
 }
