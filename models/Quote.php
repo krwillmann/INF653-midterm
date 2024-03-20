@@ -75,8 +75,8 @@ class Quote {
     // Updates an existing quote in the database
     public function update() {
         if (!$this->quoteExists()) return 'no_quote_found';
-        if (!$this->authorExists($this->author_id)) return 'author_id_not_found';
-        if (!$this->categoryExists($this->category_id)) return 'category_id_not_found';
+        if (!$this->authorExists($this->author_id)) return 'author_id Not Found';
+        if (!$this->categoryExists($this->category_id)) return 'category_id Not Found';
 
         $query = "UPDATE {$this->table} 
                   SET quote = :quote, author_id = :author_id, category_id = :category_id 
