@@ -33,12 +33,12 @@ if (!empty($data->id) && !empty($data->quote) && isset($data->author_id) && isse
     // Respond based on the outcome of the update operation
     switch ($result) {
         case 'updated':
-            echo json_encode([
+            echo json_encode(array(
                 'id' => $quote->id,
                 'quote' => $quote->quote,
                 'author_id' => $quote->author_id,
                 'category_id' => $quote->category_id
-            ]);
+            ));
             break;
         case 'no_quote_found':
             echo json_encode(['message' => 'No Quotes Found']);
