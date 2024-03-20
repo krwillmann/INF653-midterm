@@ -21,7 +21,7 @@ class Database{
         return $this->conn;
     }
 }*/
-        private $conn = null;
+        private $conn;
         private $host;
         private $port;
         private $dbname;
