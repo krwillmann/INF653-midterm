@@ -15,7 +15,7 @@ $db = $database->connect();
 $category = new Category($db);
 
 // Retrieve the category ID from the URL parameter 'id'
-$category->id = isset($_GET['id']) ? $_GET['id'] : die('Category ID not provided');
+$category->id = isset($_GET['id']) ? $_GET['id'] : die();
 
 // Attempt to retrieve the category's details using the provided ID
 $categoryFound = $category->read_single();
@@ -29,5 +29,5 @@ if ($categoryFound) {
     echo json_encode($category_arr);
 } else {
     // Output a message if no category is found with the provided ID
-    echo json_encode(['message' => 'Category ID Not Found']);
+    echo json_encode(array('message' => 'category_id Not Found'));
 }
