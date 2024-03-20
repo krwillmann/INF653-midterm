@@ -56,8 +56,8 @@ class Quote {
 
     // Inserts a new quote into the database
     public function create() {
-        $query = 'INSERT INTO' . $this->table . '(quote, author_id, category_id) 
-                  VALUES (:quote, :author_id, :category_id)';
+        $query = "INSERT INTO {$this->table} (quote, author_id, category_id) 
+                  VALUES (:quote, :author_id, :category_id)";
 
         $stmt = $this->conn->prepare($query);
         $this->quote = htmlspecialchars(strip_tags($this->quote));
@@ -80,9 +80,9 @@ class Quote {
         if (!$this->authorExists($this->author_id)) return 'author_id Not Found';
         if (!$this->categoryExists($this->category_id)) return 'category_id Not Found';
 
-        $query =  'UPDATE' . $this->table . ' 
+        $query =  "UPDATE {$this->table} 
                   SET quote = :quote, author_id = :author_id, category_id = :category_id 
-                  WHERE id = :id';
+                  WHERE id = :id";
 
         $stmt = $this->conn->prepare($query);
 
