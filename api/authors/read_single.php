@@ -15,15 +15,15 @@ $db = $database->connect();
 $author = new Author($db);
 
 // Retrieve the author's ID from the URL parameter 'id'
-$author->id = isset($_GET['id']) ? $_GET['id'] : die();
-
+$author_id = isset($_GET['id']) ? $_GET['id'] : die();
+$author->id = $author_id;
 // Attempt to retrieve the author's details using the provided ID
 $authorFound = $author->read_single();
 
 if ($authorFound) {
     // If an author is found, prepare and output their details as JSON
     $author_arr = array(
-        'id' => (int) $author->id,
+        'id' => $author->id,
         'author' => $author->author
     );
     echo json_encode($author_arr);

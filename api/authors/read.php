@@ -23,7 +23,8 @@ $num = $result->rowCount();
 // Check if there are any authors in the database
 if ($num > 0) {
     // Initialize an array to store authors' details
-    $authors_arr = [];
+    $authors_arr = array();
+    $authors_arr['data'] = array();
 
     // Fetch each row and add it to the authors array
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -35,7 +36,7 @@ if ($num > 0) {
         );
 
         // Add the author's details to the authors array
-        array_push($authors_arr, $author_item);
+        array_push($authors_arr['data'], $author_item);
     }
 
     // Encode the authors array as JSON and output it
