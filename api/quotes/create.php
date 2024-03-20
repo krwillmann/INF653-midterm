@@ -27,11 +27,11 @@ if (!empty($data->quote) && isset($data->author_id) && isset($data->category_id)
 
     // Respond and stop the script if the author or category does not exist
     if (!$authorExists) {
-        echo json_encode(['message' => 'Author ID Not Found']);
+        echo json_encode(array('message' => 'author_id Not Found'));
         return;
     }
     if (!$categoryExists) {
-        echo json_encode(['message' => 'Category ID Not Found']);
+        echo json_encode(array('message' => 'category_id Not Found'));
         return;
     }
 
