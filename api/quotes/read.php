@@ -66,8 +66,8 @@ if ($num > 0) {
         $quote_item = [
             'id' => $row['id'],
             'quote' => $row['quote'],
-            'author_id' => $row['author_id'],
-            'category_id' => $row['category_id'] 
+            'author' => $row['author_name'],
+            'category' => $row['category_name'] 
         ];
 
         // Add the quote's details to the array
