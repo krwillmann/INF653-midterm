@@ -22,10 +22,10 @@ $authorFound = $author->read_single();
 
 if ($authorFound) {
     // If an author is found, prepare and output their details as JSON
-    $author_arr = [
+    $author_arr = array(
         'id' => (int) $author->id,
         'author' => $author->author
-    ];
+    );
     echo json_encode($author_arr);
 } else {
     // If no author is found with the provided ID, output an error message

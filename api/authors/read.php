@@ -29,10 +29,10 @@ if ($num > 0) {
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row); // Converts column names into variables
 
-        $author_item = [
+        $author_item = array(
             'id' => $id,
             'author' => $author
-        ];
+        );
 
         // Add the author's details to the authors array
         array_push($authors_arr, $author_item);
