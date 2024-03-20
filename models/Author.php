@@ -15,7 +15,7 @@ class Author {
 
     // Read all authors from the database
     public function read() {
-        $query = 'SELECT id, author FROM ' . $this->table . ' ORDER BY author ASC';
+        $query = "SELECT id, author FROM {$this->table} ORDER BY author ASC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;
@@ -23,7 +23,7 @@ class Author {
 
     // Read a single author by ID
     public function read_single() {
-        $query = 'SELECT id, author FROM ' . $this->table . ' WHERE id = ? LIMIT 1';
+        $query = "SELECT id, author FROM  {$this->table} WHERE id = ? LIMIT 1";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(1, $this->id);
         $stmt->execute();
@@ -39,7 +39,7 @@ class Author {
 
     // Create a new author
     public function create() {
-        $query = 'INSERT INTO ' . $this->table . ' SET author = :author';
+        $query = "INSERT INTO  {$this->table} SET author = :author";
         $stmt = $this->conn->prepare($query);
         $this->author = htmlspecialchars(strip_tags($this->author));
         $stmt->bindParam(':author', $this->author);
@@ -52,7 +52,7 @@ class Author {
 
     // Update an existing author
     public function update() {
-        $query = 'UPDATE ' . $this->table . ' SET author = :author WHERE id = :id';
+        $query = "UPDATE {$this->table} SET author = :author WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $this->author = htmlspecialchars(strip_tags($this->author));
         $this->id = htmlspecialchars(strip_tags($this->id));
@@ -68,7 +68,7 @@ class Author {
 
     // Delete an author by ID
     public function delete() {
-        $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id';
+        $query = "DELETE FROM {$this->table} WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $this->id = htmlspecialchars(strip_tags($this->id));
         $stmt->bindParam(':id', $this->id);
