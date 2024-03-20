@@ -27,10 +27,10 @@ if (!empty($data->id)) {
     // Attempt to delete the author using the provided ID
     if ($author->delete()) {
         // Respond with the ID of the deleted author on success
-        echo json_encode(['id' => $author->id]);
+        echo json_encode(array('id' => $author->id));
     } else {
         // Respond with a failure message if the delete operation failed
-        echo json_encode(['message' => 'Author Not Deleted']);
+        echo json_encode(array('message' => 'Author Not Deleted'));
     }
 } else {
     // Respond with an error message if the ID is missing from the POSTed data

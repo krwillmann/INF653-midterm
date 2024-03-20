@@ -30,7 +30,7 @@ if ($author_id !== null) {
     $authorExists = $stmt->fetchColumn() > 0;
 
     if (!$authorExists) {
-        echo json_encode(['message' => 'author_id Not Found']);
+        echo json_encode(array('message' => 'author_id Not Found'));
         exit;
     }
 }
@@ -44,7 +44,7 @@ if ($category_id !== null) {
     $categoryExists = $stmt->fetchColumn() > 0;
 
     if (!$categoryExists) {
-        echo json_encode(['message' => 'category_id Not Found']);
+        echo json_encode(array('message' => 'category_id Not Found'));
         exit;
     }
 }
