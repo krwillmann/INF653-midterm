@@ -1,6 +1,6 @@
 <?php
 class Database{
-    private $host = 'localhost';
+   /* private $host = 'localhost';
     private $port = '5432';
     private $db_name = 'quotesdb';
     private $username = 'postgres';
@@ -20,8 +20,8 @@ class Database{
         }
         return $this->conn;
     }
-}
-/*        private $conn;
+}*/
+        private $conn;
         private $host;
         private $port;
         private $dbname;
@@ -52,4 +52,4 @@ class Database{
                 }
             }
         }
-    }*/
+    }
