@@ -44,10 +44,10 @@ if (!empty($data->id) && !empty($data->quote) && isset($data->author_id) && isse
             echo json_encode(['message' => 'No Quotes Found']);
             break;
         case 'author_id_not_found':
-            echo json_encode(['message' => 'Author ID Not Found']);
+            echo json_encode(array('message' => 'author_id Not Found'));
             break;
         case 'category_id_not_found':
-            echo json_encode(['message' => 'Category ID Not Found']);
+            echo json_encode(array('message' => 'category_id Not Found'));
             break;
         default:
             echo json_encode(['message' => 'Quote Not Updated']);
