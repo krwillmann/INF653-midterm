@@ -1,9 +1,9 @@
 <?php
 // Enable CORS, set content type to JSON, and specify allowed methods and headers for creating an author
-header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
+//header('Access-Control-Allow-Origin: *');
+//header('Content-Type: application/json');
+//header('Access-Control-Allow-Methods: POST');
+//header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
 // Include database and model files
 include_once '../../config/Database.php';

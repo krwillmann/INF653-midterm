@@ -1,9 +1,9 @@
 <?php
 // Set CORS headers for cross-origin allowance and content type to JSON
-header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
-header('Access-Control-Allow-Methods: PUT');
-header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
+//header('Access-Control-Allow-Origin: *');
+//header('Content-Type: application/json');
+//header('Access-Control-Allow-Methods: PUT');
+//header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
 // Include the necessary configuration and model files
 include_once '../../config/Database.php';

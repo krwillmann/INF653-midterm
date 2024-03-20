@@ -1,13 +1,9 @@
 <?php
-// Uncomment below lines to enable detailed error reporting for debugging
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-
 // Set CORS headers to allow cross-origin requests
-header('Access-Control-Allow-Origin: *');
-header('Content-Type: application/json');
-header('Access-Control-Allow-Methods: DELETE');
-header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
+//header('Access-Control-Allow-Origin: *');
+//header('Content-Type: application/json');
+//header('Access-Control-Allow-Methods: DELETE');
+//header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
 // Include database and model files
 include_once '../../config/Database.php';
