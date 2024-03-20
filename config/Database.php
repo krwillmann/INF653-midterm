@@ -1,6 +1,6 @@
 <?php
 class Database{
-   /* private $host = 'localhost';
+    private $host = 'localhost';
     private $port = '5432';
     private $db_name = 'quotesdb';
     private $username = 'postgres';
@@ -9,7 +9,7 @@ class Database{
 
     public function connect() {
         $this->conn = null;
-        $dsn = "pgsl:host={$this->host};port={$this->port};dbname={$this->db_name}";
+        $dsn = "pgsql:host={$this->host};port={$this->port};dbname={$this->db_name}";
 
         try {
             $this->conn = new PDO($dsn, $this->username, $this->password);
@@ -20,8 +20,8 @@ class Database{
         }
         return $this->conn;
     }
-}*/
-        private $conn;
+}
+       /* private $conn;
         private $host;
         private $port;
         private $dbname;
@@ -41,7 +41,7 @@ class Database{
                 //connection already exits, return it
                 return $this->conn;
             }else{
-                $dsn = "psql:host={$this->host};dbname={$this->dbname};";
+                $dsn = "pgsql:host={$this->host};dbname={$this->dbname};";
 
                 try{
                     $this->conn = new PDO($dsn, $this->username, $this->password);
@@ -52,4 +52,5 @@ class Database{
                 }
             }
         }
-    }
+    }*/
+
