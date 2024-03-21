@@ -15,7 +15,7 @@ $db = $database->connect();
 
 // Initialize a Quote object with the database connection
 $quote = new Quote($db);
-$author = new Author($db); // Initialize Author object
+/*$author = new Author($db); // Initialize Author object
 $category = new Category($db);
 
 $author_id = isset($_GET['author_id']) ? $_GET['author_id'] : null;
@@ -47,7 +47,7 @@ if ($category_id !== null) {
         echo json_encode(array('message' => 'category_id Not Found'));
         exit;
     }
-}
+}*/
 // Execute the read method to retrieve all quotes
 $result = $quote->read();
 
@@ -63,12 +63,12 @@ if ($num > 0) {
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row); // Converts column names into variables
 
-        $quote_item = [
+        $quote_item = array(
             'id' => $row['id'],
             'quote' => $row['quote'],
             'author' => $row['author_name'],
             'category' => $row['category_name'] 
-        ];
+        );
 
         // Add the quote's details to the array
         $quotes_arr[] = $quote_item;
