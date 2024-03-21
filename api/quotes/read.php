@@ -15,39 +15,7 @@ $db = $database->connect();
 
 // Initialize a Quote object with the database connection
 $quote = new Quote($db);
-/*$author = new Author($db); // Initialize Author object
-$category = new Category($db);
 
-$author_id = isset($_GET['author_id']) ? $_GET['author_id'] : null;
-$category_id = isset($_GET['category_id']) ? $_GET['category_id'] : null;
-
-// If author_id is provided, check for its existence
-if ($author_id !== null) {
-    $query = "SELECT COUNT(*) FROM authors WHERE id = :author_id";
-    $stmt = $db->prepare($query);
-    $stmt->bindParam(':author_id', $author_id);
-    $stmt->execute();
-    $authorExists = $stmt->fetchColumn() > 0;
-
-    if (!$authorExists) {
-        echo json_encode(array('message' => 'author_id Not Found'));
-        exit;
-    }
-}
-
-// Check if category_id is provided and exists
-if ($category_id !== null) {
-    $query = "SELECT COUNT(*) FROM categories WHERE id = :category_id";
-    $stmt = $db->prepare($query);
-    $stmt->bindParam(':category_id', $category_id);
-    $stmt->execute();
-    $categoryExists = $stmt->fetchColumn() > 0;
-
-    if (!$categoryExists) {
-        echo json_encode(array('message' => 'category_id Not Found'));
-        exit;
-    }
-}*/
 // Execute the read method to retrieve all quotes
 $result = $quote->read();
 
