@@ -43,7 +43,7 @@ class Quote {
                   WHERE q.id = ? LIMIT 1";
 
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(':id', $this->id);
+        $stmt->bindParam(1, $this->id);
         $stmt->execute();
 
         if ($stmt->rowCount() > 0) {
